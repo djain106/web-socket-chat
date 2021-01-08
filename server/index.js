@@ -24,7 +24,7 @@ const getUniqueID = () => {
 wsServer.on('request', function (request) {
     console.log((new Date()) + ' Received a new connection from origin ' + request.origin + '.');
 
-    var userId = getUniqueID();
+    var userID = getUniqueID();
     // Add logic for verifying origin of request.
     const connection = request.accept(null, request.origin);
     clients[userID] = connection;
@@ -35,7 +35,7 @@ wsServer.on('request', function (request) {
             console.log('Received Message: ', message.utf8Data);
 
             // broadcasting message to all connected clients
-            for (key in clients) {
+            for (const key in clients) {
                 clients[key].sendUTF(message.utf8Data);
                 console.log('Sent Message to: ', clients[key]);
             }

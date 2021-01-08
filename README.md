@@ -14,7 +14,7 @@ cd server
 npm install
 npm start
 ```
-The website/client is hosted at: http://localhost:3006/
+The website/client is hosted at: http://localhost:3000/
 The server is hosted at: http://localhost:8000/
 
 Simply enter the URL on your local machine. Enter a username and send messages using a websocket connection. This project was primarily to help me learn more about how to integrate websockets within a react application.

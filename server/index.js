@@ -27,7 +27,7 @@ wsServer.on('request', function (request) {
     var userId = getUniqueID();
     // Add logic for verifying origin of request.
     const connection = request.accept(null, request.origin);
-    client[userID] = connection;
+    clients[userID] = connection;
     console.log('connected: ' + userID + ' in ' + Object.getOwnPropertyNames(clients));
 
     connection.on('message', function (message) {

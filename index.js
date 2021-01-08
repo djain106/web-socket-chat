@@ -1,4 +1,4 @@
-import websocket, { connection } from 'websocket';
+import websocket from 'websocket';
 import http from 'http';
 
 const SOCKET_SERVER_PORT = 8000;
